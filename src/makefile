@@ -1,5 +1,5 @@
 CXX ?= g++
-CXXFLAGS = -W -Wall -Wno-unused-result -pthread -O2 -std=c++11
+CXXFLAGS = -W -Wall -Wno-unused-result -pthread -O2 -std=c++11 -fPIC
 
 all: mazegen
 

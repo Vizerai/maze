@@ -9,8 +9,8 @@ int RectangularMaze::VertexIndex(int row, int column) {
   return row * width_ + column;
 }
 
-void RectangularMaze::InitialiseGraph() {
-  Maze::InitialiseGraph();
+void RectangularMaze::InitializeGraph() {
+  Maze::InitializeGraph();
 
   // Lower and upper boundaries
   for (int i = 0; i < width_; ++i) {
@@ -47,6 +47,18 @@ void RectangularMaze::InitialiseGraph() {
           std::make_shared<LineBorder>(j, i + 1, j + 1, i + 1);
       adjacencylist_[VertexIndex(i, j)].push_back({VertexIndex(i + 1, j), ptr});
       adjacencylist_[VertexIndex(i + 1, j)].push_back({VertexIndex(i, j), ptr});
+    }
+  }
+
+  // Setup cells
+  int cell_index = 0;
+  for(int i=0; i<height_ - 1; ++i) {
+    for(int j=0; j<width_ - 1; ++j) {
+      cellmap_[cell_index].push_back(VertexIndex(i,j));
+      cellmap_[cell_index].push_back(VertexIndex(i,j+1));
+      cellmap_[cell_index].push_back(VertexIndex(i+1,j));
+      cellmap_[cell_index].push_back(VertexIndex(i+1,j+1));
+      cell_index++;
     }
   }
 }

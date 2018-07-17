@@ -7,8 +7,8 @@ HexagonalMaze::HexagonalMaze(int size) : Maze(6 * size * size), size_(size) {
   endvertex_ = VertexIndex(3, 1, size_ - 1, 0);
 }
 
-void HexagonalMaze::InitialiseGraph() {
-  Maze::InitialiseGraph();
+void HexagonalMaze::InitializeGraph() {
+  Maze::InitializeGraph();
 
   // Hexagon can be split into 6 triangular sectors
   // Each of which is subdivided into size_*size triangles

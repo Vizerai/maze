@@ -18,8 +18,8 @@ CircularMaze::CircularMaze(int size) : size_(size) {
   endvertex_ = startvertex_ + ringnodecount_.back() / 2;
 }
 
-void CircularMaze::InitialiseGraph() {
-  Maze::InitialiseGraph();
+void CircularMaze::InitializeGraph() {
+  Maze::InitializeGraph();
 
   for (int i = 1; i < size_; ++i) {
     for (int j = 0; j < ringnodecount_[i]; ++j) {

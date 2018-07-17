@@ -3,11 +3,13 @@
 
 #include <memory>
 #include <vector>
+#include <unordered_map>
 
 #include <gtkmm/application.h>
 #include <gtkmm/window.h>
 
 #include "cellborder.h"
+#include "cellmap.h"
 #include "minimumspanningtreealgorithm.h"
 
 class Maze {
@@ -24,8 +26,8 @@ class Maze {
   int startvertex_, endvertex_;
   std::vector<std::vector<std::pair<int, std::shared_ptr<CellBorder>>>> adjacencylist_;
   
-  std::vector<int> cells;
-  unordered_map<int, std::vector<int>> cellmap;
+  std::vector<int> cells_;
+  CellMap cellmap_;
 
  protected:
   virtual std::tuple<double, double, double, double> GetCoordinateBounds()

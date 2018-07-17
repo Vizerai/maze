@@ -13,10 +13,13 @@ public:
   		: vertices_(vertices), startvertex_(startvertex), endvertex_(endvertex), adjacencylist_(adjacencylist) {}
   virtual ~MyArea() {}
 
+  void UpdateCellPath(const std::unordered_map<int, std::vector<int>> &cellmap);
+
   int vertices_;
   int startvertex_;
   int endvertex_;
   const std::vector<std::vector<std::pair<int, std::shared_ptr<CellBorder>>>> *adjacencylist_;
+  std::unordered_map<int, std::vector<int>> cellmap_;
 
 protected:
   //Override default signal handler:

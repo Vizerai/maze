@@ -24,5 +24,14 @@ bool MyArea::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
   }
   cr->stroke();
 
+  for(int i=0; i < height-1; ++i) {
+    for(int j=0; j < width-1; ++j) {
+      cellmap_.DrawEdge(i, j, i+1, j+1, cr);
+    }
+  }
   return true;
+}
+
+void MyArea::UpdateCellPath(const std::unordered_map<int, std::vector<int>> &cellmap) {
+  cellmap_ = cellmap;
 }

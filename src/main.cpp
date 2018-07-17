@@ -195,7 +195,7 @@ int main(int argc, char *argv[]) {
   }
 
   std::cout << "Initialising graph..." << std::endl;
-  maze->InitialiseGraph();
+  maze->InitializeGraph();
   std::cout << "Generating maze..." << std::endl;
   maze->GenerateMaze(algorithm);
   if (optionmap["-t"] == 0) {

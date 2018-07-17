@@ -6,7 +6,7 @@
 class CircularMaze : public Maze {
  public:
   CircularMaze(int);
-  virtual void InitialiseGraph();
+  virtual void InitializeGraph();
 
  protected:
   int size_;

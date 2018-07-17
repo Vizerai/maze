@@ -6,7 +6,7 @@
 class HoneyCombMaze : public Maze {
  public:
   HoneyCombMaze(int);
-  void InitialiseGraph();
+  void InitializeGraph();
 
  protected:
   int size_;

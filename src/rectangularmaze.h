@@ -3,7 +3,7 @@
 class RectangularMaze : public Maze {
  public:
   RectangularMaze(int, int);
-  virtual void InitialiseGraph();
+  virtual void InitializeGraph();
 
  private:
   int width_, height_;

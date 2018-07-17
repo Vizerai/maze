@@ -6,7 +6,7 @@
 class HexagonalMaze : public Maze {
  public:
   HexagonalMaze(int);
-  virtual void InitialiseGraph();
+  virtual void InitializeGraph();
 
  protected:
   int size_;

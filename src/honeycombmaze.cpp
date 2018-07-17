@@ -7,8 +7,8 @@ const int HoneyCombMaze::neigh[6][2] = {{-1, 0}, {-1, 1}, {0, 1},
 HoneyCombMaze::HoneyCombMaze(int size)
     : Maze(3 * size * (size - 1) + 1, 0, 3 * size * (size - 1)), size_(size) {}
 
-void HoneyCombMaze::InitialiseGraph() {
-  Maze::InitialiseGraph();
+void HoneyCombMaze::InitializeGraph() {
+  Maze::InitializeGraph();
 
   for (int u = -size_ + 1; u < size_; ++u) {
     auto vextent = VExtent(u);
